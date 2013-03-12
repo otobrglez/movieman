@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Movieman::VERSION
   gem.authors       = ["Oto Brglez"]
   gem.email         = ["otobrglez@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Wrapper for sites/APIs that provide information about movies.}
+  gem.summary       = %q{This gem provides access to some popular public sites that provide information about movies.}
+  gem.homepage      = "https://github.com/otobrglez/movieman"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
