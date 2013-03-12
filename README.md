@@ -1,6 +1,6 @@
 # Movieman
 
-Movieman is API wrapper for pages that provide movie information.
+Movieman is wrapper for sites/APIs that provide information about movies.
 
 ## Installation
 
@@ -18,10 +18,43 @@ Or install it yourself as:
 
 ## Services
 
-* RottenTomatoes  #movie, #cast, #search
-* Themoviedb  #movie, #search
-* NYTimes_review  #search
-* OMDBAPI  #movie, #search
+### RottenTomatoes
+
+[API Docs for Rotten Tomatoes](http://developer.rottentomatoes.com/iodocs)
+
+	Movieman::RottenTomatoes.config do |c|
+    	c.api_key = "<key here>"
+    end
+
+    movie = Movieman::RottenTomatoes.movie "770672122"
+    movies = Movieman::RottenTomatoes.search "Matrix"
+    
+### The Movie Database
+
+[API Docs for The Movie Database.](http://docs.themoviedb.apiary.io/#movies)
+
+	Movieman::Themoviedb.config do |c|
+    	c.api_key = "<key here>"
+    end
+    
+    movie = Movieman::Themoviedb.movie "605"
+    movies = Movieman::Themoviedb.search "Matrix"
+
+### New York Times Movie Reviews
+
+[Docs for NY Times API](http://developer.nytimes.com)
+
+	Movieman::NYTimes_review.config do |c|
+    	c.api_key = "<key here>"
+    end
+    
+    movies = Movieman::NYTimes_review.search "matrix"
+
+### The Open Movie Database API
+
+[The Open Movie Database API](http://www.omdbapi.com/)
+
+	movies = Movieman::OMDBAPI.search "matrix"
 
 ## Contributing
 
